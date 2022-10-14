@@ -81,6 +81,7 @@ export default {
     username: 'Username',
     password: 'Password',
     any: 'any',
+    logout: 'login out',
     thirdparty: 'Or connect with',
     thirdpartyTips: 'Can not be simulated on local, so please combine you own business simulation! ! !'
   },
