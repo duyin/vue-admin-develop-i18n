@@ -1,3 +1,11 @@
+/*
+ * @Author: 杜印 m18612326243@163.com
+ * @Date: 2021-11-19 15:21:54
+ * @LastEditors: 杜印 m18612326243@163.com
+ * @LastEditTime: 2022-10-19 16:58:53
+ * @FilePath: /vue-admin-develop-i18n/tests/unit/components/Breadcrumb.spec.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { mount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
@@ -12,8 +20,8 @@ const routes = [
     path: '/',
     name: 'home',
     children: [{
-      path: 'dashboard',
-      name: 'dashboard'
+      path: 'home',
+      name: 'Home'
     }]
   },
   {
@@ -55,8 +63,8 @@ describe('Breadcrumb.vue', () => {
     localVue,
     router
   })
-  it('dashboard', () => {
-    router.push('/dashboard')
+  it('home', () => {
+    router.push('/home')
     const len = wrapper.findAll('.el-breadcrumb__inner').length
     expect(len).toBe(1)
   })

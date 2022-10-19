@@ -1,7 +1,12 @@
 export default {
   route: {
-    dashboard: '首页',
-    documentation: '文档',
+    home: '首页',
+    'play-to-earn': '玩游戏赢取',
+    events: '事件',
+    account: '账户',
+    download: '下载',
+    whitepaper: '白皮书',
+    marketplace: '市场',
     guide: '引导页',
     Tree: 'tree树',
     Example: '用户管理',
@@ -67,7 +72,7 @@ export default {
     profile: '个人中心'
   },
   navbar: {
-    dashboard: '首页',
+    Home: '首页',
     github: '项目地址',
     logOut: '退出登录',
     profile: '个人中心',

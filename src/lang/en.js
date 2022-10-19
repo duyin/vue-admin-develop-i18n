@@ -1,7 +1,12 @@
 export default {
   route: {
-    dashboard: 'Dashboard',
-    documentation: 'Documentation',
+    home: 'Home',
+    'play-to-earn': 'Play-to-earn',
+    events: 'Events',
+    account: 'Account',
+    download: 'Download',
+    whitepaper: 'Whitepaper',
+    marketplace: 'Marketplace',
     guide: 'Guide',
     permission: 'Permission',
     pagePermission: 'Page Permission',
@@ -39,7 +44,6 @@ export default {
     'menu1-2-2': 'Menu 1-2-2',
     'menu1-3': 'Menu 1-3',
     menu2: 'Menu 2',
-    Table: 'Table',
     dynamicTable: 'Dynamic Table',
     dragTable: 'Drag Table',
     inlineEditTable: 'Inline Edit',
@@ -68,7 +72,7 @@ export default {
     profile: 'Profile'
   },
   navbar: {
-    dashboard: 'Dashboard',
+    dashboard: 'Home',
     github: 'Github',
     logOut: 'Log Out',
     profile: 'Profile',

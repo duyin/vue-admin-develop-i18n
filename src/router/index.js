@@ -57,120 +57,70 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/home',
     children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
-      meta: { title: 'dashboard', icon: 'dashboard', affix: true }
+      path: 'home',
+      name: 'Home',
+      component: () => import('@/views/home/index'),
+      meta: { title: 'home', icon: 'home', affix: true }
     }]
   },
-
   {
-    path: '/example',
+    path: 'marketplace',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'https://whitepaper.abeats.com/',
+        meta: { title: 'marketplace', icon: 'link' }
+      }
+    ]
+  },
+  {
+    path: '/hero',
+    component: Layout,
+    redirect: '/example/table',
+    name: 'Hero',
+    meta: { title: 'play-to-earn', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: 'download',
+        name: 'Download',
+        component: () => import('@/views/playToEarn/download/index'),
+        meta: { title: 'download', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'whitepaper',
+        name: 'Whitepaper',
+        component: () => import('@/views/playToEarn/whitepaper/index'),
+        meta: { title: 'whitepaper', icon: 'tree' }
       }
     ]
   },
 
-  // {
-  //   path: '/form',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'Form',
-  //       component: () => import('@/views/form/index'),
-  //       meta: { title: '资金管理', icon: 'form' }
-  //     }
-  //   ]
-  // },
-
-  // {
-  //   path: '/nested',
-  //   component: Layout,
-  //   redirect: '/nested/menu1',
-  //   name: 'Nested',
-  //   meta: {
-  //     title: '信息管理',
-  //     icon: 'nested'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'menu1',
-  //       component: () => import('@/views/nested/menu1/index'), // Parent router-view
-  //       name: 'Menu1',
-  //       meta: { title: '用户管理' },
-  //       children: [
-  //         {
-  //           path: 'menu1-1',
-  //           component: () => import('@/views/nested/menu1/menu1-1'),
-  //           name: 'Menu1-1',
-  //           meta: { title: '指导页面' }
-  //         },
-  //         {
-  //           path: 'menu1-2',
-  //           component: () => import('@/views/nested/menu1/menu1-2'),
-  //           name: 'Menu1-2',
-  //           meta: { title: '管理' },
-  //           children: [
-  //             {
-  //               path: 'menu1-2-1',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-  //               name: 'Menu1-2-1',
-  //               meta: { title: '金融管理' }
-  //             },
-  //             {
-  //               path: 'menu1-2-2',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-  //               name: 'Menu1-2-2',
-  //               meta: { title: '贷款管理' }
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'menu1-3',
-  //           component: () => import('@/views/nested/menu1/menu1-3'),
-  //           name: 'Menu1-3',
-  //           meta: { title: '审批管理' }
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'menu2',
-  //       component: () => import('@/views/nested/menu2/index'),
-  //       name: 'Menu2',
-  //       meta: { title: '系统管理' }
-  //     }
-  //   ]
-  // },
-
-  // {
-  //   path: 'external-link',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-  //       meta: { title: '用户管理', icon: 'link' }
-  //     }
-  //   ]
-  // },
-
+  {
+    path: '/events',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Events',
+        component: () => import('@/views/events/index'),
+        meta: { title: 'events', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/account',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Account',
+        component: () => import('@/views/account/index'),
+        meta: { title: 'account', icon: 'form' }
+      }
+    ]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
