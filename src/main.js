@@ -2,7 +2,7 @@
  * @Author: 杜印 m18612326243@163.com
  * @Date: 2021-11-19 15:21:54
  * @LastEditors: 杜印 m18612326243@163.com
- * @LastEditTime: 2022-10-14 15:00:25
+ * @LastEditTime: 2022-10-19 14:54:02
  * @FilePath: /vue-admin-template-master/src/main.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -34,7 +34,6 @@ import '@/permission' // permission control
  * Currently MockJs will be used in the production environment,
  * please remove it before going online ! ! !
  */
-console.log(i18n, 'i18n')
 if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
   mockXHR()

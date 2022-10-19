@@ -2,7 +2,7 @@
  * @Author: 杜印 m18612326243@163.com
  * @Date: 2021-11-19 15:21:54
  * @LastEditors: 杜印 m18612326243@163.com
- * @LastEditTime: 2022-10-18 15:21:39
+ * @LastEditTime: 2022-10-19 14:53:35
  * @FilePath: /vue-admin-develop-i18n/src/layout/components/AppMain.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -11,7 +11,7 @@
     <transition name="fade-transform" mode="out-in">
       <router-view :key="key" />
     </transition>
-    <el-tooltip placement="top" content="backTop" v-if="gotop">
+    <el-tooltip placement="top" content="backTop" v-if="goTop">
       <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="50" transition-name="fade" />
     </el-tooltip>
   </section>
@@ -24,7 +24,7 @@ export default {
   components: { BackToTop },
   data() {
     return {
-      gotop: false,
+      goTop: false,
       myBackToTopStyle: {
         right: '16px',
         bottom: '16px',
@@ -49,8 +49,8 @@ export default {
   },
   methods: {
     handleScroll() {
-      const scrolltop = document.documentElement.scrollTop || document.body.scrollTop
-      scrolltop > 30 ? (this.gotop = true) : (this.gotop = false)
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      scrollTop > 30 ? (this.goTop = true) : (this.goTop = false)
     }
   }
 }

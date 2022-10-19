@@ -12,11 +12,11 @@
         @click.middle.native="!isAffix(tag)?closeSelectedTag(tag):''"
         @contextmenu.prevent.native="openMenu(tag,$event)"
       >
-        {{ tag.title }}
+        {{ generateTitle(tag.title) }}
         <span v-if="!isAffix(tag)" class="el-icon-close" @click.prevent.stop="closeSelectedTag(tag)" />
       </router-link>
     </scroll-pane>
-    <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
+    <ul v-show="visible" :style="{right:right+'px',top:top+'px'}" class="contextmenu">
       <li @click="refreshSelectedTag(selectedTag)">Refresh</li>
       <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">Close</li>
       <li @click="closeOthersTags">Close Others</li>
@@ -28,25 +28,23 @@
 <script>
 import ScrollPane from './ScrollPane'
 import path from 'path'
-
+import { generateTitle } from '@/utils/i18n'
 export default {
   components: { ScrollPane },
   data() {
     return {
       visible: false,
       top: 0,
-      left: 0,
+      right: 0,
       selectedTag: {},
       affixTags: []
     }
   },
   computed: {
     visitedViews() {
-      console.log(this.$store.state, 'tag')
       return this.$store.state.tagsView.visitedViews
     },
     routes() {
-      console.log(this.$store.state, 'permisision')
       return this.$store.state.permission.routes
     }
   },
@@ -68,6 +66,7 @@ export default {
     this.addTags()
   },
   methods: {
+    generateTitle,
     isActive(route) {
       return route.path === this.$route.path
     },
