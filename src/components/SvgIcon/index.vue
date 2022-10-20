@@ -1,3 +1,11 @@
+<!--
+ * @Author: 杜印 m18612326243@163.com
+ * @Date: 2021-11-19 15:21:54
+ * @LastEditors: 杜印 m18612326243@163.com
+ * @LastEditTime: 2022-10-20 11:08:25
+ * @FilePath: /vue-admin-develop-i18n/src/components/SvgIcon/index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
   <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
@@ -6,7 +14,6 @@
 </template>
 
 <script>
-// doc: https://panjiachen.github.io/vue-element-admin-site/feature/component/svg-icon.html#usage
 import { isExternal } from '@/utils/validate'
 
 export default {
@@ -47,9 +54,9 @@ export default {
 
 <style scoped>
 .svg-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -0.2em;
   fill: currentColor;
   overflow: hidden;
 }

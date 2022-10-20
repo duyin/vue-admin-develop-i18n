@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="问答页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="问答页面web" transform="translate(-30.000000, -404.000000)">
+            <g id="nav_left" transform="translate(-2.000000, 0.000000)">
+                <g id="Icon/24/Home" transform="translate(32.000000, 404.000000)">
+                    <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <polygon id="icon_left_events" fill="#FFFFFF" points="9.40948003 24 3.21405284 19 1.7409252 13.5 4.53479342 9 6.42608773 11 9.40948003 7 9 0.379727452 17.2243294 8.81011404 19.6140276 5.62166975 22.8181878 12.1898637 21.1837668 19.5546949 14.7419898 24 12.5999061 20 12.7736237 15 9 19"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

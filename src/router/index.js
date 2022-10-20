@@ -70,29 +70,29 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://whitepaper.abeats.com/',
-        meta: { title: 'marketplace', icon: 'link' }
+        path: 'https://www.baidu.com/',
+        meta: { title: 'marketplace', icon: 'market' }
       }
     ]
   },
   {
     path: '/hero',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '/hero/download',
     name: 'Hero',
-    meta: { title: 'play-to-earn', icon: 'el-icon-s-help' },
+    meta: { title: 'play-to-earn', icon: 'playToEarn' },
     children: [
       {
         path: 'download',
         name: 'Download',
         component: () => import('@/views/playToEarn/download/index'),
-        meta: { title: 'download', icon: 'table' }
+        meta: { title: 'download', icon: 'download' }
       },
       {
         path: 'whitepaper',
         name: 'Whitepaper',
         component: () => import('@/views/playToEarn/whitepaper/index'),
-        meta: { title: 'whitepaper', icon: 'tree' }
+        meta: { title: 'whitepaper', icon: 'whitepaper' }
       }
     ]
   },
@@ -105,7 +105,7 @@ export const constantRoutes = [
         path: 'index',
         name: 'Events',
         component: () => import('@/views/events/index'),
-        meta: { title: 'events', icon: 'form' }
+        meta: { title: 'events', icon: 'events' }
       }
     ]
   },
@@ -117,7 +117,7 @@ export const constantRoutes = [
         path: 'index',
         name: 'Account',
         component: () => import('@/views/account/index'),
-        meta: { title: 'account', icon: 'form' }
+        meta: { title: 'account', icon: 'account' }
       }
     ]
   },
