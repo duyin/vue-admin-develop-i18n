@@ -14,7 +14,7 @@
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              {{ $t('navbar.dashboard') }}
+              {{ $t('navbar.hom') }}
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided @click.native="logout">
